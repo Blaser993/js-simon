@@ -78,7 +78,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
-function askAgain() {
+function askAgain() { //questa funzione pulisce gli array e riesegue la funzione "simonSays"
 
     console.log("mi hai cliccato")
 
@@ -87,10 +87,6 @@ function askAgain() {
     matchedNumbers = []
 
     userNumbers = []
-
-
-
-
 
     console.log(simonNumbers, userNumbers, matchedNumbers)
 
