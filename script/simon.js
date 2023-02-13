@@ -55,7 +55,7 @@ function compareNumbers(){
 
     }
 
-    console.log("numeri indovinati: ", matchedNumbers.length, [...matchedNumbers])
+    console.log("numeri indovinati: ", matchedNumbers.length,".", " Ecco la lista dei numeri che hai indovinato: ", [...matchedNumbers])
 
 }
 
