@@ -32,26 +32,27 @@ let userNumbers = []
 
 console.log(simonNumbers)
 
+simonSays()
+
+
+
 
 
 // RICHIAMO GLI ELEMENTI PER STAMPARLI A SCHERMO
-
 
 let numberGuessedEl = document.getElementById("number-guessed")
 
 let numbersGuessedEl = document.getElementById("numbers-guessed") 
 
-let startEl = document.getElementById("start")
-
 let simonNumbersEl = document.getElementById("simon-numbers")
+
+let startEl = document.getElementById("start")
 
 startEl.addEventListener("click", askAgain)
 
 
-// FUNZIONI
 
-simonSays()
-    
+// FUNZIONI
 
 function simonSays(){
 
