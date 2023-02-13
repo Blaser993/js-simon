@@ -85,7 +85,7 @@ guessNumbers (guessNumbers, 1000);
 function guessNumbers(){
 
     for (let i = 0; i < NUMERI; i++ ){
-        insertNumber = prompt("scrivi uno dei numeri che hai memorizzato");
+        insertNumber = parseInt(prompt("scrivi uno dei numeri che hai memorizzato"));
         console.log("hai inserito: ",insertNumber);
         userNumbers.push(insertNumber)
     }
