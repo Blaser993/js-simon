@@ -1,5 +1,8 @@
 console.log("ciao simon")
 
+NUMERI = 5
+
+
 // Descrizione:
 // Visualizzare in pagina 5 numeri casuali con alert.
 // Dopo che l’utente ha chiuso l’alert fate partire un timer di 30 secondi.
@@ -24,21 +27,41 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
+function onClick(){
+    console.log("mi hai cliccato")
+}
+
 simonNumbers = []
+userNumbers = []
 
-  
 
-for (let i = 0; i < 5; i++){
-    let random = getRandomInt(1,99)
-    console.log(random)
+while ( simonNumbers.length < NUMERI){
+    let randomNumber = getRandomInt(1,99)
+    console.log(randomNumber)
 
-    if (!simonNumbers.includes(random)){
-        simonNumbers.push(random)
-    }
-    
+    if (!simonNumbers.includes(randomNumber)){
+        simonNumbers.push(randomNumber)
+    } 
 
 }
 
 alert(simonNumbers)
 console.log(simonNumbers)
+
+// ----------- funzione dell'alert per inserire i numeri con delay
+
+setTimeout (myFunction, 1000);
+
+function myFunction(){
+
+    for (let i = 0; i < NUMERI; i++ ){
+        userNumber = prompt("scrivi uno dei numeri che hai memorizzato");
+        console.log(userNumber);
+    }
+
+
+}
+
+//----------
+
   
