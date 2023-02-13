@@ -39,13 +39,17 @@ simonSays (simonSays, 1000);
 
 
 
+
+
+
+// FUNZIONI
+
 function simonSays(){
 
     guessNumbers();
     
     compareNumbers ();
 }
-
 
 function getRandomNumbers(num) {
     while (simonNumbers.length < num) {
