@@ -38,9 +38,8 @@ function compareNumbers(){
     for (let i = 0; i < NUMERI; i++){
 
         let insertNumber = userNumbers[i]
-        let pcNumber = simonNumbers[i]
         
-        console.log(insertNumber, pcNumber)
+        // console.log(insertNumber)
         
     
         if(simonNumbers.includes(insertNumber)){
@@ -67,7 +66,7 @@ const matchedNumbers = []
 
 while ( simonNumbers.length < NUMERI){
     let randomNumber = getRandomInt(1,99)
-    console.log(randomNumber)
+    //console.log(randomNumber)
 
     if (!simonNumbers.includes(randomNumber)){
         simonNumbers.push(randomNumber)
