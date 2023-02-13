@@ -1,6 +1,5 @@
 console.log("ciao simon")
 
-const NUMERI = 5
 
 // Descrizione:
 // Visualizzare in pagina 5 numeri casuali con alert.
@@ -19,6 +18,46 @@ const NUMERI = 5
 // Individuate gli elementi di cui avete bisogno per realizzare il programma.
 
 
+
+
+
+
+
+
+const simonNumbers = []
+const userNumbers = []
+const matchedNumbers = []
+
+
+getRandomNumbers(5)
+
+alert(simonNumbers)
+console.log(simonNumbers)
+
+
+simonSays (simonSays, 1000);
+
+
+
+function simonSays(){
+
+    guessNumbers();
+    
+    compareNumbers ();
+}
+
+
+function getRandomNumbers(num) {
+    while (simonNumbers.length < num) {
+        let randomNumber = getRandomInt(1, 99)
+        //console.log(randomNumber)
+        if (!simonNumbers.includes(randomNumber)) {
+            simonNumbers.push(randomNumber)
+        }
+
+    }
+    return NUMERI = num
+}
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -51,39 +90,6 @@ function compareNumbers(){
 
 }
 
-
-const simonNumbers = []
-const userNumbers = []
-const matchedNumbers = []
-
-
-while ( simonNumbers.length < NUMERI){
-    let randomNumber = getRandomInt(1,99)
-    //console.log(randomNumber)
-
-    if (!simonNumbers.includes(randomNumber)){
-        simonNumbers.push(randomNumber)
-    } 
-
-}
-
-alert(simonNumbers)
-console.log(simonNumbers)
-
-
-// ----------- funzione dell'alert per inserire i numeri con delay
-
-simonSays (simonSays, 1000);
-
-function simonSays(){
-
-    guessNumbers();
-    
-    compareNumbers ()
-}
-
-
-
 function guessNumbers() {
     for (let i = 0; i < NUMERI; i++) {
         insertNumber = parseInt(prompt("scrivi uno dei numeri che hai memorizzato"));
@@ -91,6 +97,6 @@ function guessNumbers() {
         userNumbers.push(insertNumber);
     }
 }
-//----------
+
 
   
