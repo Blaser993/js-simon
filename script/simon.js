@@ -31,8 +31,38 @@ function onClick(){
     console.log("mi hai cliccato")
 }
 
-simonNumbers = []
-userNumbers = []
+function compareNumbers(){
+
+    console.log(simonNumbers, userNumbers)
+
+
+
+    for (let i = 0; i < NUMERI; i++){
+
+        let insertNumber = userNumbers[i]
+        let pcNumber = simonNumbers[i]
+        
+        console.log(insertNumber, pcNumber)
+        
+    
+        if(simonNumbers.includes(insertNumber)){
+
+            matchedNumbers.push(insertNumber)
+            
+        }
+
+        
+
+    }
+
+    console.log("numeri indovinati: ", matchedNumbers.length, [...matchedNumbers])
+
+}
+
+
+const simonNumbers = []
+const userNumbers = []
+const matchedNumbers = []
 
 
 while ( simonNumbers.length < NUMERI){
@@ -50,15 +80,17 @@ console.log(simonNumbers)
 
 // ----------- funzione dell'alert per inserire i numeri con delay
 
-setTimeout (myFunction, 1000);
+guessNumbers (guessNumbers, 1000);
 
-function myFunction(){
+function guessNumbers(){
 
     for (let i = 0; i < NUMERI; i++ ){
-        userNumber = prompt("scrivi uno dei numeri che hai memorizzato");
-        console.log(userNumber);
+        insertNumber = prompt("scrivi uno dei numeri che hai memorizzato");
+        console.log("hai inserito: ",insertNumber);
+        userNumbers.push(insertNumber)
     }
-
+    
+    compareNumbers ()
 
 }
 
