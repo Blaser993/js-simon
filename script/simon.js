@@ -42,7 +42,7 @@ setTimeout (simonSays, DELAY);
 
 function simonSays(){
 
-    guessNumbers();
+    askNumbers();
     
     compareNumbers ();
 }
@@ -90,7 +90,7 @@ function compareNumbers(){
 
 }
 
-function guessNumbers() {
+function askNumbers() {
     for (let i = 0; i < NUMERI; i++) {
         insertNumber = parseInt(prompt("scrivi uno dei numeri che hai memorizzato"));
         console.log("hai inserito: ", insertNumber);
