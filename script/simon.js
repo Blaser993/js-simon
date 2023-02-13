@@ -1,6 +1,11 @@
 console.log("ciao simon")
 
 
+const S = 1 //inserisci quì il tempo di attesa espresso in secondi
+const DELAY = 1000 * S
+
+
+
 // Descrizione:
 // Visualizzare in pagina 5 numeri casuali con alert.
 // Dopo che l’utente ha chiuso l’alert fate partire un timer di 30 secondi.
@@ -18,12 +23,6 @@ console.log("ciao simon")
 // Individuate gli elementi di cui avete bisogno per realizzare il programma.
 
 
-
-
-
-
-
-
 const simonNumbers = []
 const userNumbers = []
 const matchedNumbers = []
@@ -35,10 +34,7 @@ alert(simonNumbers)
 console.log(simonNumbers)
 
 
-simonSays (simonSays, 1000);
-
-
-
+setTimeout (simonSays, DELAY);
 
 
 
