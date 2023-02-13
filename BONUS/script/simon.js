@@ -50,11 +50,7 @@ startEl.addEventListener("click", askAgain)
 
 // FUNZIONI
 
-getRandomNumbers(5);
-
-alert("Memorizza questi numeri:" + " "  + simonNumbers);
-
-setTimeout (delayed, DELAY);
+simonSays()
     
 
 function simonSays(){
@@ -62,6 +58,8 @@ function simonSays(){
     getRandomNumbers(5);
 
     alert("Memorizza questi numeri:" + " "  + simonNumbers);
+
+    alert("fra 3 secondi potrai inserire i numeri che hai memorizzato");
 
     setTimeout (delayed, DELAY);
     
