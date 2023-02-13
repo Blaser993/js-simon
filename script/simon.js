@@ -1,7 +1,6 @@
 console.log("ciao simon")
 
-NUMERI = 5
-
+const NUMERI = 5
 
 // Descrizione:
 // Visualizzare in pagina 5 numeri casuali con alert.
@@ -74,20 +73,24 @@ console.log(simonNumbers)
 
 // ----------- funzione dell'alert per inserire i numeri con delay
 
-guessNumbers (guessNumbers, 1000);
+simonSays (simonSays, 1000);
 
-function guessNumbers(){
+function simonSays(){
 
-    for (let i = 0; i < NUMERI; i++ ){
-        insertNumber = parseInt(prompt("scrivi uno dei numeri che hai memorizzato"));
-        console.log("hai inserito: ",insertNumber);
-        userNumbers.push(insertNumber)
-    }
+    guessNumbers();
     
     compareNumbers ()
-
 }
 
+
+
+function guessNumbers() {
+    for (let i = 0; i < NUMERI; i++) {
+        insertNumber = parseInt(prompt("scrivi uno dei numeri che hai memorizzato"));
+        console.log("hai inserito: ", insertNumber);
+        userNumbers.push(insertNumber);
+    }
+}
 //----------
 
   
