@@ -35,8 +35,6 @@ function compareNumbers(){
 
     console.log(simonNumbers, userNumbers)
 
-
-
     for (let i = 0; i < NUMERI; i++){
 
         let insertNumber = userNumbers[i]
@@ -46,6 +44,8 @@ function compareNumbers(){
         
     
         if(simonNumbers.includes(insertNumber)){
+
+            console.log(insertNumber)
 
             matchedNumbers.push(insertNumber)
             
