@@ -1,7 +1,8 @@
 console.log("ciao simon")
 
 
-const S = 1 //inserisci quì il tempo di attesa espresso in secondi
+
+const S = 3 //inserisci quì il tempo di attesa espresso in secondi
 const DELAY = 1000 * S
 
 
@@ -32,8 +33,6 @@ let userNumbers = []
 console.log(simonNumbers)
 
 
-setTimeout (simonSays, DELAY);
-
 
 // RICHIAMO GLI ELEMENTI PER STAMPARLI A SCHERMO
 
@@ -44,20 +43,28 @@ let numbersGuessedEl = document.getElementById("numbers-guessed")
 
 let startEl = document.getElementById("start")
 
+let simonNumbersEl = document.getElementById("simon-numbers")
+
 startEl.addEventListener("click", askAgain)
 
 
 // FUNZIONI
 
+getRandomNumbers(5);
+
+alert("Memorizza questi numeri:" + " "  + simonNumbers);
+
+setTimeout (delayed, DELAY);
+    
+
 function simonSays(){
 
     getRandomNumbers(5);
 
-    alert(simonNumbers);
+    alert("Memorizza questi numeri:" + " "  + simonNumbers);
 
-    askNumbers();
+    setTimeout (delayed, DELAY);
     
-    compareNumbers (userNumbers);
 }
 
 function getRandomNumbers(num) {
@@ -92,7 +99,6 @@ function askAgain() { //questa funzione pulisce gli array e riesegue la funzione
 
     simonSays()
 }
-    
 
 
 function compareNumbers(userNumbers) {
@@ -130,8 +136,17 @@ function askNumbers() {
         userNumbers.push(insertNumber);
     }
 
+
     return userNumbers
 }
 
+
+function delayed (){
+
+    askNumbers()
+
+    compareNumbers(userNumbers)
+
+}
 
   
