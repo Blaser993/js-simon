@@ -23,11 +23,11 @@ const DELAY = 1000 * S
 // Individuate gli elementi di cui avete bisogno per realizzare il programma.
 
 
-const simonNumbers = []
-const userNumbers = []
-const matchedNumbers = []
+let simonNumbers = []
 
+let matchedNumbers = []
 
+let userNumbers = []
 
 console.log(simonNumbers)
 
@@ -44,7 +44,7 @@ let numbersGuessedEl = document.getElementById("numbers-guessed")
 
 let startEl = document.getElementById("start")
 
-startEl.addEventListener("click", onClick)
+startEl.addEventListener("click", askAgain)
 
 
 // FUNZIONI
@@ -57,7 +57,7 @@ function simonSays(){
 
     askNumbers();
     
-    compareNumbers ();
+    compareNumbers (userNumbers);
 }
 
 function getRandomNumbers(num) {
@@ -78,12 +78,28 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
-function onClick() {
-    simonSays()
-    console.log("mi hai cliccato")
-}
+function askAgain() {
 
-function compareNumbers() {
+    console.log("mi hai cliccato")
+
+    simonNumbers = []
+
+    matchedNumbers = []
+
+    userNumbers = []
+
+
+
+
+
+    console.log(simonNumbers, userNumbers, matchedNumbers)
+
+    simonSays()
+}
+    
+
+
+function compareNumbers(userNumbers) {
 
     console.log(simonNumbers, userNumbers)
 
@@ -109,11 +125,16 @@ function compareNumbers() {
 }
 
 function askNumbers() {
+
+    
+
     for (let i = 0; i < NUMERI; i++) {
         insertNumber = parseInt(prompt("scrivi uno dei numeri che hai memorizzato"));
         console.log("hai inserito: ", insertNumber);
         userNumbers.push(insertNumber);
     }
+
+    return userNumbers
 }
 
 
