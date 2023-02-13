@@ -38,20 +38,14 @@ function compareNumbers(){
     for (let i = 0; i < NUMERI; i++){
 
         let insertNumber = userNumbers[i]
-        
         // console.log(insertNumber)
-        
     
         if(simonNumbers.includes(insertNumber)){
 
             console.log(insertNumber)
-
             matchedNumbers.push(insertNumber)
             
         }
-
-        
-
     }
 
     console.log("numeri indovinati: ", matchedNumbers.length,".", " Ecco la lista dei numeri che hai indovinato: ", [...matchedNumbers])
@@ -76,6 +70,7 @@ while ( simonNumbers.length < NUMERI){
 
 alert(simonNumbers)
 console.log(simonNumbers)
+
 
 // ----------- funzione dell'alert per inserire i numeri con delay
 
