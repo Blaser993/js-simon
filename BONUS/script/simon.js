@@ -28,19 +28,32 @@ const userNumbers = []
 const matchedNumbers = []
 
 
-getRandomNumbers(5)
 
-alert(simonNumbers)
 console.log(simonNumbers)
 
 
 setTimeout (simonSays, DELAY);
 
 
+// RICHIAMO GLI ELEMENTI PER STAMPARLI A SCHERMO
+
+
+let numberGuessedEl = document.getElementById("number-guessed")
+
+let numbersGuessedEl = document.getElementById("numbers-guessed") 
+
+let startEl = document.getElementById("start")
+
+startEl.addEventListener("click", onClick)
+
 
 // FUNZIONI
 
 function simonSays(){
+
+    getRandomNumbers(5);
+
+    alert(simonNumbers);
 
     askNumbers();
     
@@ -65,11 +78,12 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
-function onClick(){
+function onClick() {
+    simonSays()
     console.log("mi hai cliccato")
 }
 
-function compareNumbers(){
+function compareNumbers() {
 
     console.log(simonNumbers, userNumbers)
 
@@ -85,6 +99,10 @@ function compareNumbers(){
             
         }
     }
+
+    numberGuessedEl.innerHTML = matchedNumbers.length
+
+    numbersGuessedEl.innerHTML = [...matchedNumbers]
 
     console.log("numeri indovinati: ", matchedNumbers.length,".", " Ecco la lista dei numeri che hai indovinato: ", [...matchedNumbers])
 
